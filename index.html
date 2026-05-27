@@ -1,10 +1,11 @@
-# EXODO CORPORATION — Website Oceanic Theme
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>EXODO CORPORATION</title>
 
   <!-- BOOTSTRAP -->
@@ -13,8 +14,9 @@
   <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
 
-  <!-- ICONS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
   <style>
 
@@ -37,6 +39,7 @@
       background:rgba(0,0,0,0.45);
       backdrop-filter:blur(10px);
       border-bottom:1px solid rgba(0,174,255,0.15);
+      padding:15px 0;
     }
 
     .logo-img{
@@ -51,7 +54,7 @@
 
     .navbar-brand{
       font-weight:900;
-      font-size:1.5rem;
+      font-size:1.4rem;
       letter-spacing:2px;
       color:#63d5ff !important;
       text-shadow:0 0 10px rgba(99,213,255,0.6);
@@ -61,6 +64,7 @@
       color:#d7f4ff !important;
       margin-left:10px;
       transition:0.3s;
+      font-weight:600;
     }
 
     .nav-link:hover{
@@ -79,6 +83,7 @@
       display:flex;
       align-items:center;
       position:relative;
+      overflow:hidden;
     }
 
     .hero::before{
@@ -157,7 +162,7 @@
       margin:auto;
     }
 
-    /* CARDS */
+    /* SERVICE CARDS */
 
     .service-card{
       background:rgba(6,25,40,0.9);
@@ -244,17 +249,115 @@
       margin-bottom:5px;
     }
 
-    /* RESPONSIVE */
+    /* ========================= */
+    /* RESPONSIVO MOBILE */
+    /* ========================= */
 
-    @media(max-width:768px){
+    @media (max-width:768px){
+
+      body{
+        overflow-x:hidden;
+      }
+
+      .navbar{
+        padding:10px 0;
+      }
+
+      .navbar-brand{
+        font-size:1rem;
+        gap:10px !important;
+      }
+
+      .logo-img{
+        width:45px;
+        height:45px;
+      }
+
+      .navbar-toggler{
+        border:none;
+      }
+
+      .navbar-collapse{
+        background:rgba(0,0,0,0.92);
+        padding:15px;
+        border-radius:15px;
+        margin-top:10px;
+      }
+
+      .nav-link{
+        margin:10px 0;
+        text-align:center;
+      }
+
+      /* HERO */
+
+      .hero{
+        min-height:auto;
+        padding:120px 0 80px;
+        text-align:center;
+      }
+
+      .hero::before{
+        width:350px;
+        height:350px;
+        top:-100px;
+        right:-150px;
+      }
 
       .hero h1{
-        font-size:2.5rem;
+        font-size:2.2rem;
+        line-height:1.2;
+      }
+
+      .hero p{
+        font-size:0.95rem;
+        line-height:1.7;
+      }
+
+      .btn-ocean{
+        width:100%;
+        padding:15px;
+        font-size:1rem;
+      }
+
+      /* SECTIONS */
+
+      .section{
+        padding:70px 0;
+      }
+
+      .section-title{
+        margin-bottom:40px;
       }
 
       .section-title h2{
         font-size:2rem;
       }
+
+      .section-title p{
+        font-size:0.95rem;
+      }
+
+      /* CARDS */
+
+      .service-card{
+        padding:30px 20px;
+        text-align:center;
+      }
+
+      .service-card i{
+        font-size:40px;
+      }
+
+      .service-card h3{
+        font-size:1.3rem;
+      }
+
+      .service-card p{
+        font-size:0.95rem;
+      }
+
+      /* ORCA */
 
       .orca-box{
         padding:30px 20px;
@@ -264,20 +367,47 @@
         font-size:2rem;
       }
 
+      .orca-box p{
+        font-size:0.95rem;
+        line-height:1.8;
+      }
+
+      /* SOBRE */
+
+      #sobre img{
+        margin-bottom:20px;
+      }
+
+      /* FOOTER */
+
+      footer{
+        padding:30px 20px;
+      }
+
+      footer h3{
+        font-size:1.5rem;
+      }
+
+      footer p{
+        font-size:0.9rem;
+      }
+
     }
 
   </style>
+
 </head>
+
 <body>
 
   <!-- NAVBAR -->
 
   <nav class="navbar navbar-expand-lg fixed-top">
+
     <div class="container">
 
       <a class="navbar-brand d-flex align-items-center gap-3" href="#">
 
-        <!-- LOGO DA EMPRESA -->
         <img
           src="https://i.ibb.co/DDj91XyR/logo-exodo-png.jpg"
           alt="Logo EXODO"
@@ -286,6 +416,7 @@
 
         <div>
           <div>EXODO</div>
+
           <small style="font-size:12px; letter-spacing:3px; color:#bfefff;">
             CORPORATION
           </small>
@@ -293,13 +424,19 @@
 
       </a>
 
-      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <button
+        class="navbar-toggler bg-light"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menu"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="menu">
 
         <ul class="navbar-nav ms-auto">
+
           <li class="nav-item">
             <a class="nav-link" href="#sobre">Sobre</a>
           </li>
@@ -315,19 +452,23 @@
           <li class="nav-item">
             <a class="nav-link" href="#contato">Contato</a>
           </li>
+
         </ul>
 
       </div>
 
     </div>
+
   </nav>
 
   <!-- HERO -->
 
   <section class="hero">
+
     <div class="container hero-content">
 
       <div class="row">
+
         <div class="col-lg-8">
 
           <h1>
@@ -341,7 +482,6 @@
           </p>
 
           <p>
-            Mais do que tecnologia, nossa missão também é impactar o planeta.
             Parte dos nossos lucros é destinada à preservação da vida marinha,
             especialmente à proteção das orcas.
           </p>
@@ -351,67 +491,90 @@
           </button>
 
         </div>
+
       </div>
 
     </div>
+
   </section>
 
   <!-- SERVIÇOS -->
 
   <section class="section" id="servicos">
+
     <div class="container">
 
       <div class="section-title">
+
         <h2>Nossos Serviços</h2>
+
         <p>
           Soluções digitais profissionais criadas para posicionar sua marca
           no mais alto nível.
         </p>
+
       </div>
 
       <div class="row g-4">
 
         <div class="col-md-4">
+
           <div class="service-card">
+
             <i class="fa-solid fa-globe"></i>
+
             <h3>Sites Profissionais</h3>
+
             <p>
-              Desenvolvemos websites modernos, rápidos e responsivos
-              para empresas e marcas.
+              Desenvolvemos websites modernos, rápidos e responsivos.
             </p>
+
           </div>
+
         </div>
 
         <div class="col-md-4">
+
           <div class="service-card">
+
             <i class="fa-solid fa-chart-line"></i>
+
             <h3>Landing Pages</h3>
+
             <p>
-              Páginas focadas em conversão e performance para campanhas,
-              produtos e negócios digitais.
+              Páginas focadas em conversão e performance.
             </p>
+
           </div>
+
         </div>
 
         <div class="col-md-4">
+
           <div class="service-card">
+
             <i class="fa-solid fa-code"></i>
+
             <h3>Desenvolvimento Web</h3>
+
             <p>
-              Soluções personalizadas utilizando tecnologias modernas
-              para criar experiências únicas.
+              Soluções modernas para experiências digitais únicas.
             </p>
+
           </div>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- ORCAS -->
 
   <section class="section orca-section" id="orca">
+
     <div class="container">
 
       <div class="orca-box">
@@ -419,56 +582,57 @@
         <h2>Protegendo os Oceanos</h2>
 
         <p>
-          Na EXODO CORPORATION acreditamos que tecnologia também pode gerar impacto positivo.
-          Parte dos valores arrecadados pela empresa será destinada à preservação da vida marinha,
-          especialmente às orcas — símbolos de inteligência, liberdade e equilíbrio nos oceanos.
+          Parte dos valores arrecadados será destinada à preservação
+          das orcas e da vida marinha.
         </p>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- SOBRE -->
 
   <section class="section" id="sobre">
+
     <div class="container">
 
       <div class="section-title">
+
         <h2>Sobre a Exodo</h2>
+
         <p>
-          Criamos experiências digitais com identidade forte, design moderno
-          e foco em resultado.
+          Criamos experiências digitais com identidade forte e foco em resultado.
         </p>
+
       </div>
 
       <div class="row align-items-center g-5">
 
         <div class="col-lg-6">
+
           <img
             src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1972&auto=format&fit=crop"
             class="img-fluid rounded-5 shadow"
             alt="Desenvolvimento Web"
           >
+
         </div>
 
         <div class="col-lg-6">
-          <p style="color:#d6eef8; line-height:2;">
-            Nossa empresa nasceu para unir tecnologia, criatividade e propósito.
-            Desenvolvemos projetos digitais profissionais capazes de conectar
-            empresas ao público certo através de design moderno, performance
-            e presença online estratégica.
-          </p>
 
           <p style="color:#d6eef8; line-height:2;">
-            Cada projeto desenvolvido pela EXODO CORPORATION carrega
-            inovação, qualidade e visão de futuro.
+            Desenvolvemos projetos digitais profissionais capazes
+            de conectar empresas ao público certo.
           </p>
+
         </div>
 
       </div>
 
     </div>
+
   </section>
 
   <!-- FOOTER -->
@@ -478,12 +642,13 @@
     <h3>EXODO CORPORATION</h3>
 
     <p>Desenvolvimento Web • Landing Pages • Experiências Digitais</p>
-    <p>Conectando marcas a pessoas através da tecnologia.</p>
 
     <div class="mt-4">
+
       <i class="fa-brands fa-instagram me-3"></i>
       <i class="fa-brands fa-discord me-3"></i>
       <i class="fa-brands fa-github"></i>
+
     </div>
 
     <p class="mt-4" style="font-size:14px; color:#688896;">
@@ -493,8 +658,8 @@
   </footer>
 
   <!-- BOOTSTRAP -->
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
-
