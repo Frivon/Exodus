@@ -1,0 +1,501 @@
+# EXODUS CORPORATION — Website Oceanic Theme
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXODUS CORPORATION</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Montserrat',sans-serif;
+    }
+
+    body{
+      background:#020b16;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      background:rgba(0,0,0,0.45);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(0,174,255,0.15);
+    }
+
+    .logo-img{
+      width:60px;
+      height:60px;
+      object-fit:cover;
+      border-radius:50%;
+      border:2px solid rgba(99,213,255,0.4);
+      box-shadow:0 0 20px rgba(99,213,255,0.35);
+      background:#02131f;
+    }
+
+    .navbar-brand{
+      font-weight:900;
+      font-size:1.5rem;
+      letter-spacing:2px;
+      color:#63d5ff !important;
+      text-shadow:0 0 10px rgba(99,213,255,0.6);
+    }
+
+    .nav-link{
+      color:#d7f4ff !important;
+      margin-left:10px;
+      transition:0.3s;
+    }
+
+    .nav-link:hover{
+      color:#63d5ff !important;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+
+      background:
+      linear-gradient(rgba(0,10,20,0.75), rgba(0,5,15,0.92)),
+      url('https://th.bing.com/th/id/R.75ccbdc1255865411e92439a91d308e6?rik=fDfeLtib%2bEfaTA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fDBAhQUf.jpg&ehk=e0Spmy%2fgVItrU9wi4GQjqnxgHoXnRYj0w4tH4MbTdxA%3d&risl=&pid=ImgRaw&r=0') center/cover;
+
+      display:flex;
+      align-items:center;
+      position:relative;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:700px;
+      height:700px;
+      background:radial-gradient(circle, rgba(0,174,255,0.18), transparent 70%);
+      top:-250px;
+      right:-250px;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+    }
+
+    .hero h1{
+      font-size:4rem;
+      font-weight:900;
+      color:#ffffff;
+      line-height:1.1;
+      text-shadow:0 0 25px rgba(0,174,255,0.25);
+    }
+
+    .hero h1 span{
+      color:#63d5ff;
+    }
+
+    .hero p{
+      margin-top:20px;
+      color:#d8f6ff;
+      font-size:1.1rem;
+      max-width:700px;
+      line-height:1.8;
+    }
+
+    .btn-ocean{
+      margin-top:30px;
+      background:linear-gradient(135deg,#009dff,#005eff);
+      color:white;
+      border:none;
+      padding:15px 35px;
+      border-radius:50px;
+      font-weight:700;
+      transition:0.3s;
+      box-shadow:0 0 25px rgba(0,174,255,0.3);
+    }
+
+    .btn-ocean:hover{
+      transform:translateY(-4px);
+      box-shadow:0 0 35px rgba(0,174,255,0.5);
+    }
+
+    /* SECTIONS */
+
+    .section{
+      padding:100px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .section-title h2{
+      font-size:2.8rem;
+      font-weight:800;
+      color:#63d5ff;
+      margin-bottom:15px;
+    }
+
+    .section-title p{
+      color:#b6d7e2;
+      max-width:700px;
+      margin:auto;
+    }
+
+    /* CARDS */
+
+    .service-card{
+      background:rgba(6,25,40,0.9);
+      border:1px solid rgba(99,213,255,0.15);
+      border-radius:25px;
+      padding:40px 30px;
+      transition:0.3s;
+      height:100%;
+      box-shadow:0 0 30px rgba(0,0,0,0.25);
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+      border-color:#63d5ff;
+      box-shadow:0 0 40px rgba(0,174,255,0.2);
+    }
+
+    .service-card i{
+      font-size:50px;
+      color:#63d5ff;
+      margin-bottom:20px;
+    }
+
+    .service-card h3{
+      margin-bottom:15px;
+      font-weight:700;
+    }
+
+    .service-card p{
+      color:#c9e5ef;
+      line-height:1.8;
+    }
+
+    /* ORCA SECTION */
+
+    .orca-section{
+      background:
+      linear-gradient(rgba(0,0,0,0.75), rgba(0,10,25,0.92)),
+      url('https://images.unsplash.com/photo-1518391846015-55a9cc003b25?q=80&w=1974&auto=format&fit=crop') center/cover;
+
+      border-top:1px solid rgba(99,213,255,0.15);
+      border-bottom:1px solid rgba(99,213,255,0.15);
+    }
+
+    .orca-box{
+      background:rgba(0,0,0,0.45);
+      border:1px solid rgba(99,213,255,0.15);
+      border-radius:25px;
+      padding:50px;
+      backdrop-filter:blur(8px);
+      text-align:center;
+    }
+
+    .orca-box h2{
+      color:#63d5ff;
+      font-size:3rem;
+      margin-bottom:20px;
+      font-weight:800;
+    }
+
+    .orca-box p{
+      color:#e2f5ff;
+      font-size:1.1rem;
+      line-height:1.9;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#01050b;
+      padding:40px 0;
+      text-align:center;
+      border-top:1px solid rgba(99,213,255,0.15);
+    }
+
+    footer h3{
+      color:#63d5ff;
+      font-weight:800;
+      margin-bottom:15px;
+    }
+
+    footer p{
+      color:#96b8c4;
+      margin-bottom:5px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      .section-title h2{
+        font-size:2rem;
+      }
+
+      .orca-box{
+        padding:30px 20px;
+      }
+
+      .orca-box h2{
+        font-size:2rem;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+
+        <!-- LOGO DA EMPRESA -->
+        <img
+          src="https://i.ibb.co/DDj91XyR/logo-exodus-png.jpg"
+          alt="Logo EXODUS"
+          class="logo-img"
+        >
+
+        <div>
+          <div>EXODUS</div>
+          <small style="font-size:12px; letter-spacing:3px; color:#bfefff;">
+            CORPORATION
+          </small>
+        </div>
+
+      </a>
+
+      <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menu">
+
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#sobre">Sobre</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#servicos">Serviços</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#orca">Vida Marinha</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="#contato">Contato</a>
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="container hero-content">
+
+      <div class="row">
+        <div class="col-lg-8">
+
+          <h1>
+            Conectando <span>Marcas</span> a Pessoas
+          </h1>
+
+          <p>
+            A EXODUS CORPORATION é especializada em desenvolvimento web moderno,
+            criando sites, landing pages e experiências digitais profissionais
+            que fortalecem empresas no ambiente online.
+          </p>
+
+          <p>
+            Mais do que tecnologia, nossa missão também é impactar o planeta.
+            Parte dos nossos lucros é destinada à preservação da vida marinha,
+            especialmente à proteção das orcas.
+          </p>
+
+          <button class="btn-ocean">
+            Solicitar Projeto
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+
+  <section class="section" id="servicos">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Nossos Serviços</h2>
+        <p>
+          Soluções digitais profissionais criadas para posicionar sua marca
+          no mais alto nível.
+        </p>
+      </div>
+
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fa-solid fa-globe"></i>
+            <h3>Sites Profissionais</h3>
+            <p>
+              Desenvolvemos websites modernos, rápidos e responsivos
+              para empresas e marcas.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fa-solid fa-chart-line"></i>
+            <h3>Landing Pages</h3>
+            <p>
+              Páginas focadas em conversão e performance para campanhas,
+              produtos e negócios digitais.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="service-card">
+            <i class="fa-solid fa-code"></i>
+            <h3>Desenvolvimento Web</h3>
+            <p>
+              Soluções personalizadas utilizando tecnologias modernas
+              para criar experiências únicas.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORCAS -->
+
+  <section class="section orca-section" id="orca">
+    <div class="container">
+
+      <div class="orca-box">
+
+        <h2>Protegendo os Oceanos</h2>
+
+        <p>
+          Na EXODUS CORPORATION acreditamos que tecnologia também pode gerar impacto positivo.
+          Parte dos valores arrecadados pela empresa será destinada à preservação da vida marinha,
+          especialmente às orcas — símbolos de inteligência, liberdade e equilíbrio nos oceanos.
+        </p>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+
+  <section class="section" id="sobre">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Sobre a EXODUS</h2>
+        <p>
+          Criamos experiências digitais com identidade forte, design moderno
+          e foco em resultado.
+        </p>
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <div class="col-lg-6">
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1972&auto=format&fit=crop"
+            class="img-fluid rounded-5 shadow"
+            alt="Desenvolvimento Web"
+          >
+        </div>
+
+        <div class="col-lg-6">
+          <p style="color:#d6eef8; line-height:2;">
+            Nossa empresa nasceu para unir tecnologia, criatividade e propósito.
+            Desenvolvemos projetos digitais profissionais capazes de conectar
+            empresas ao público certo através de design moderno, performance
+            e presença online estratégica.
+          </p>
+
+          <p style="color:#d6eef8; line-height:2;">
+            Cada projeto desenvolvido pela EXODUS CORPORATION carrega
+            inovação, qualidade e visão de futuro.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer id="contato">
+
+    <h3>EXODUS CORPORATION</h3>
+
+    <p>Desenvolvimento Web • Landing Pages • Experiências Digitais</p>
+    <p>Conectando marcas a pessoas através da tecnologia.</p>
+
+    <div class="mt-4">
+      <i class="fa-brands fa-instagram me-3"></i>
+      <i class="fa-brands fa-discord me-3"></i>
+      <i class="fa-brands fa-github"></i>
+    </div>
+
+    <p class="mt-4" style="font-size:14px; color:#688896;">
+      © 2026 EXODUS CORPORATION — Todos os direitos reservados
+    </p>
+
+  </footer>
+
+  <!-- BOOTSTRAP -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
